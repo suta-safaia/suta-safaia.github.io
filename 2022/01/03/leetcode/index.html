@@ -134,6 +134,9 @@
 <p>使用了split分割字符串,解决/重复的问题</p>
 <p>分割之后的处理，（1）空字符串和”.”跳过不处理，（2）”..”为上级目录，循环弹出栈直至弹出”/“或者栈为空，（3）压入目录到栈中</p>
 <p>最后弹出栈，栈后入先出，顺序是反的，所以使用stringbuilder的insert方法，将弹出的字符串插入从字符串开头插入。<del>差点儿就append后reverse提交了🤣</del></p>
+<h5 id="2021-01-07"><a href="#2021-01-07" class="headerlink" title="2021-01-07"></a>2021-01-07</h5><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/maximum-nesting-depth-of-the-parentheses/">1614. 括号的最大嵌套深度 - 力扣（LeetCode） (leetcode-cn.com)</a></p>
+<p>困难我睡大觉，简单我重拳出击</p>
+<p>题目保证是有效括号表达式，不需要使用栈，直接遍历字符串，遇到 ‘(‘ 计数器+1，遇到 ‘)’ 计数器-1，计数器最大的时刻就算括号的最大嵌套深度</p>
 
       </section>
 
