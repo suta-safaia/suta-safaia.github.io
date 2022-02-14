@@ -137,6 +137,36 @@
 <h5 id="2021-01-07"><a href="#2021-01-07" class="headerlink" title="2021-01-07"></a>2021-01-07</h5><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/maximum-nesting-depth-of-the-parentheses/">1614. 括号的最大嵌套深度 - 力扣（LeetCode） (leetcode-cn.com)</a></p>
 <p>困难我睡大觉，简单我重拳出击</p>
 <p>题目保证是有效括号表达式，不需要使用栈，直接遍历字符串，遇到 ‘(‘ 计数器+1，遇到 ‘)’ 计数器-1，计数器最大的时刻就算括号的最大嵌套深度</p>
+<hr>
+<p>摸了好久，还是继续写，从过年后继续写</p>
+<h5 id="2022-02-10"><a href="#2022-02-10" class="headerlink" title="2022-02-10"></a>2022-02-10</h5><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/simplified-fractions/">1447. 最简分数 - 力扣（LeetCode） (leetcode-cn.com)</a></p>
+<p>找出分子是分母的因数(除1)，这种不符合条件，例如分母是12</p>
+<p>那么不符合条件的分子就有2，4，6</p>
+<p>然后把上面的数字翻倍直到大于等于12，4x2=8，2x5=10,</p>
+<p>不符合条件的分子就2，4，6，8，10了</p>
+<p>最简分数就找到了</p>
+<p><del>然后。。。以为能少遍历一些，结果屁用没有，跟遍历gcd效率差不多</del></p>
+<h5 id="2022-02-11"><a href="#2022-02-11" class="headerlink" title="2022-02-11"></a>2022-02-11</h5><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/minimum-difference-between-highest-and-lowest-of-k-scores/">1984. 学生分数的最小差值 - 力扣（LeetCode） (leetcode-cn.com)</a></p>
+<p>排序+滑动窗口，很好解决的一道题</p>
+<p><em>时间复杂度O(nlogn)+O(n) 快排+滑动</em></p>
+<p><em>空间复杂度O(1) 在原数组上排序</em></p>
+<h5 id="2022-02-13"><a href="#2022-02-13" class="headerlink" title="2022-02-13"></a>2022-02-13</h5><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/maximum-number-of-balloons/">1189. “气球” 的最大数量 - 力扣（LeetCode） (leetcode-cn.com)</a></p>
+<p>又是一道很简单题，遍历统计，寻找能组成’气球‘字符串中的短木板字母（字母总数/组成‘气球’所需的数量最小值）</p>
+<p><em>时间复杂度O(n) 遍历</em></p>
+<p><em>空间复杂度O(1) 只有几个单词的统计数目</em></p>
+<p><strong>2022-02-14</strong></p>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/single-element-in-a-sorted-array/comments/">540. 有序数组中的单一元素 - 力扣（LeetCode） (leetcode-cn.com)</a></p>
+<p>要求时间复杂度O(logn)，一眼二分法</p>
+<p>查找数字的左右数字是否和它相同，不同则该数字单一</p>
+<p>相同则查找这两个数字的左右侧数字数量，奇数的一方包含单一数字（2n + 1 两两成双+单一数字)</p>
+<p>缩小范围，重复以上行为找到单一元素</p>
+<p><em>时间复杂度O(logn) 二分法</em></p>
+<p><em>空间复杂度O(1) 只有记载左右范围的临时变量</em></p>
+<p>tips:如果数组是无序的，可以使用位运算（异或)，相同的两个数字异或=0，剩下的单一数字异或0等于本身</p>
+<p><em>时间复杂度O(n) 遍历</em></p>
+<p><em>空间复杂度O(1) 异或临时变量</em></p>
+<p>tipstips: 情人节寻找单一元素是吧，两两成双是吧🧐🧐🧐😃😃😃😶😶😶😑😑😑😖😖😖😭😭😭😭😭😭☝☝☝，我杀你一万遍也不够。</p>
+<p>tipstipstips: 反转了，今晚有五个姑娘加一只畜生陪我🥵🥵🥵</p>
 
       </section>
 
