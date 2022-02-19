@@ -208,6 +208,22 @@
 <p><em>时间复杂度O(n²)  遍历数组处理数据O(n)，两两判断节点关系O(n²),再判断每个节点的循环情况最好O(n),最坏O(n²)</em></p>
 <p><em>空间复杂度O(n)   使用内部类记录了节点的关联节点和祖先节点</em></p>
 <p>最后时间击败9%，空间击败62%。。。晚点儿回去看看别人怎么解的，感觉是偷懒使用了内部类的问题</p>
+<h5 id="2022-02-17"><a href="#2022-02-17" class="headerlink" title="2022-02-17"></a>2022-02-17</h5><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/knight-probability-in-chessboard/">688. 骑士在棋盘上的概率 - 力扣（LeetCode） (leetcode-cn.com)</a></p>
+<p>记忆化搜索，用一个三维数组ps代表在第 i 行第 j 列 第k步棋子在此处的概率</p>
+<p>初始化棋子开始点ps【row】【column】【0】 = 1（第0步开始点棋子出现的概率位1）</p>
+<p>然后从这个点开始寻找8种落点，如果在棋盘内，设置该点第一步的概率为1/8</p>
+<p>然后从第一步可能的点找第二部可能的点的概率，概率为第一步概率1/8</p>
+<p>继续递推直到算到所有点棋子第k步在此的概率，把棋盘上所有第k步的落点概率加起来，就是k步后棋子内还在棋盘的概率</p>
+<h5 id="2022-02-18"><a href="#2022-02-18" class="headerlink" title="2022-02-18"></a>2022-02-18</h5><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/find-center-of-star-graph/">1791. 找出星型图的中心节点 - 力扣（LeetCode） (leetcode-cn.com)</a></p>
+<p>什么送分题</p>
+<h5 id="2022-02-19"><a href="#2022-02-19" class="headerlink" title="2022-02-19"></a>2022-02-19</h5><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/pancake-sorting/solution/">969. 煎饼排序 题解 - 力扣（LeetCode） (leetcode-cn.com)</a></p>
+<p>排序，每次把最大值放到末尾。</p>
+<p>使用煎饼翻转方法，翻转最大值到末尾</p>
+<p>例如数组[1,4,3,2],最大值4在第二个，翻转前两个数字到第一位[4,1,3,2],然后再翻转所有使第一位到最后一位[2,3,1,4]（本身在第一位就只用翻转所有、本身在最后一位就不用翻转）。</p>
+<p>然后再不考虑已排序的数字[2,3,1]，继续上面的操作（类似选择排序）,直到排序完成</p>
+<p>遍历n-1次，最坏翻转处理2（n-1）次</p>
+<p><em>时间复杂度O(n²)  遍历寻找最大值O(nlogn)，翻转处理O(n²)</em></p>
+<p><em>空间复杂度O(1)   在原数组上进行操作</em></p>
 
       </section>
 
