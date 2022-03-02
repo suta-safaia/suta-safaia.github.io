@@ -224,6 +224,24 @@
 <p>遍历n-1次，最坏翻转处理2（n-1）次</p>
 <p><em>时间复杂度O(n²)  遍历寻找最大值O(nlogn)，翻转处理O(n²)</em></p>
 <p><em>空间复杂度O(1)   在原数组上进行操作</em></p>
+<h5 id="2022-03-02"><a href="#2022-03-02" class="headerlink" title="2022-03-02"></a>2022-03-02</h5><p>工作忙死了😭，中间做了这些题，懒得写了，抄点儿注释，代码也随便乱写的，能过就行x</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/1-bit-and-2-bit-characters/">717. 1 比特与 2 比特字符 - 力扣（LeetCode） (leetcode-cn.com)</a></p>
+<p>很简单</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/push-dominoes/">838. 推多米诺 - 力扣（LeetCode） (leetcode-cn.com)</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 从左向右遍历，用一个值x代表向右推的多米诺的位置（默认-1)，用left代表已经完成推算不再考虑的部分</span><br><span class="line"> * 1.遍历时有以下情况，在x为-1的时候，碰到向左的多米诺index，代表没有向左的多米诺没有向右推的，这个多米诺左边的多米诺全部被推向左边（left,index)</span><br><span class="line"> * 2.在x为-1的时候，遍历完了，没有向左推的，没有任何多米诺状态发生改变</span><br><span class="line"> * 3.在x不为-1的情况，遍历完了，没有向左推的，也就是这个多米诺右边的多米诺的全部推向右边(x,dominoes.size)</span><br><span class="line"> * 4.在x不为-1的情况，遇到了向右推的index,那么这部分(x,index)向右倒</span><br><span class="line"> * 5.在x不为-1的情况，遇到了向左推index，取中看在哪里撞到，撞到的左边部分(x,mid)向右，右边部分(mid,index)向左，碰撞处可能是(右，立，左），（右，左）两种情况。</span><br><span class="line"> * 6.以上更新完这部分多米诺的状态后，将left设置为index，x设置为-1,这部分处理完毕，不用在管了，因为题目说了多个多米诺不会造成更多的力。</span><br><span class="line"> *   也就是例子(右推，右推，立，左推），最后结果也是（右，右，立，左）</span><br><span class="line"> *</span><br><span class="line"> */</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/complex-number-multiplication/">537. 复数乘法 - 力扣（LeetCode） (leetcode-cn.com)</a></p>
+<p>注释都没x</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/zigzag-conversion/">6. Z 字形变换 - 力扣（LeetCode） (leetcode-cn.com)</a></p>
+<p>两年前做的，直接提交√</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/find-the-closest-palindrome/">564. 寻找最近的回文数 - 力扣（LeetCode） (leetcode-cn.com)</a></p>
+<p>😤感觉这困难题并不困难</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//很好理解，更接近的回文数，就是前半部分的大数字参考意义大于后半部分</span><br><span class="line">//1.所以保持前半部分不变,后半部分回文前半部分，例如14547 取145 回文是14541最近</span><br><span class="line">//2.边界情况，有时候，稍微更改中间数字进位或退位更进，例如10499，按照情况1，是10401更近，实际是10501</span><br><span class="line">//3.第二种的扩展情况，中间数字的退位或者进位的连锁反应，导致位数变化，比如10000, 离他最近的可以是10001,也可是9999，题目要求取最小，所以是9999</span><br><span class="line"></span><br><span class="line">//汇总就是五种情况</span><br><span class="line">//1.前半段数字+构筑回文 2.（前半段数字+1）+构筑回文 3.（前半段数字-1）+构筑回文 4. 【9...9xN...9】 5. 【10...0xN...01】</span><br></pre></td></tr></table></figure>
+
+
+
+
+
 
       </section>
 
