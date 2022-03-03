@@ -238,10 +238,9 @@
 <p>😤感觉这困难题并不困难</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//很好理解，更接近的回文数，就是前半部分的大数字参考意义大于后半部分</span><br><span class="line">//1.所以保持前半部分不变,后半部分回文前半部分，例如14547 取145 回文是14541最近</span><br><span class="line">//2.边界情况，有时候，稍微更改中间数字进位或退位更进，例如10499，按照情况1，是10401更近，实际是10501</span><br><span class="line">//3.第二种的扩展情况，中间数字的退位或者进位的连锁反应，导致位数变化，比如10000, 离他最近的可以是10001,也可是9999，题目要求取最小，所以是9999</span><br><span class="line"></span><br><span class="line">//汇总就是五种情况</span><br><span class="line">//1.前半段数字+构筑回文 2.（前半段数字+1）+构筑回文 3.（前半段数字-1）+构筑回文 4. 【9...9xN...9】 5. 【10...0xN...01】</span><br></pre></td></tr></table></figure>
 
-
-
-
-
+<h5 id="2022-03-03"><a href="#2022-03-03" class="headerlink" title="2022-03-03"></a>2022-03-03</h5><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/add-digits/">258. 各位相加 - 力扣（LeetCode） (leetcode-cn.com)</a></p>
+<p>1.循环相加</p>
+<p>2.同余定理</p>
 
       </section>
 
